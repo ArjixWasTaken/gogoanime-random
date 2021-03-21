@@ -16,7 +16,6 @@
 // @match        *://*.gogoanimes.co/*
 // @match        *://*.animego.to/*
 // @match        *://*.gogoanime.ai/*
-// @match        *://*.gogoanime.news/*
 // @grant        GM_xmlhttpRequest
 // @require      https://code.jquery.com/jquery-3.5.1.min.js
 // ==/UserScript==
