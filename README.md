@@ -3,6 +3,7 @@ A userscript that adds a random button to gogoanime, that one feature we all wan
 
 
 The Python script is for generating ``all_anime.json`` that is going to be used by the userscript.
+
 I have a workflow set up to update it every 5 days.
 
 To install the userscript head over to [greasyfork](https://greasyfork.org/en/scripts/423703-gogorandom)
