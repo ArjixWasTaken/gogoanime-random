@@ -15,8 +15,8 @@
 // @match        *://*.gogoanime.so/*
 // @match        *://*.gogoanimes.co/*
 // @match        *://*.animego.to/*
-// @match         *://*.gogoanime.ai/*
-// @match         *://*.gogoanime.news/*
+// @match        *://*.gogoanime.ai/*
+// @match        *://*.gogoanime.news/*
 // @grant        GM_xmlhttpRequest
 // @require      https://code.jquery.com/jquery-3.5.1.min.js
 // ==/UserScript==
@@ -36,7 +36,7 @@ function getRandomInt(min, max) {
             onload: function(res) {
                 const ALL_ANIME = JSON.parse(res.response)
                 const getDomainLink = () => {
-                    return document.location.href.match(/https\:\/\/.*?\.(?:movie|video|io|vc|so|co|to|sh|se|tv|in)/)[0]
+                    return "https://" + document.location.href.match(/gogoanime[s]?\.[a-z]+/)?.[0]
                 }
                 const getRandomAnime = () => {
                     const index = getRandomInt(1, ALL_ANIME.length-1)
