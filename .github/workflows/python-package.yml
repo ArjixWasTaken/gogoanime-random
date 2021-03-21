@@ -1,12 +1,9 @@
 name: Python package
 
 on:
+  push:
   schedule:
     - cron: 0 0 */5 * *
-  push:
-   branches:
-     - maim
-  
 
 jobs:
   build:
