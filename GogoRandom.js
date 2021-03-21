@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GogoRandom
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  A userscript that adds a random button to gogoanime, that one feature we all wanted years now but didn't get.
 // @author       Arjix
 // @match        *://*.gogoanime.vc/*
@@ -15,8 +15,8 @@
 // @match        *://*.gogoanime.so/*
 // @match        *://*.gogoanimes.co/*
 // @match        *://*.animego.to/*
-// match         *://*.gogoanime.ai/*
-// match         *://*.gogoanime.news/*
+// @match         *://*.gogoanime.ai/*
+// @match         *://*.gogoanime.news/*
 // @grant        GM_xmlhttpRequest
 // @require      https://code.jquery.com/jquery-3.5.1.min.js
 // ==/UserScript==
