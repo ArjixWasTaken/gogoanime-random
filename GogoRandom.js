@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GogoRandom
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  A userscript that adds a random button to gogoanime, that one feature we all wanted years now but didn't get.
 // @author       Arjix
 // @match        *://*.gogoanime.vc/*
@@ -29,7 +29,8 @@ function getRandomInt(min, max) {
 (function() {
     'use strict';
     const link = "https://raw.githubusercontent.com/ArjixGamer/gogoanime-random/main/all_anime.json"
-    GM_xmlhttpRequest({
+    const getRandomAnime = () => {
+        GM_xmlhttpRequest({
             method: "GET",
             url: link,
             onload: function(res) {
@@ -37,13 +38,13 @@ function getRandomInt(min, max) {
                 const getDomainLink = () => {
                     return "https://" + document.location.href.match(/gogoanime[s]?\.[a-z]+/)?.[0]
                 }
-                const getRandomAnime = () => {
-                    const index = getRandomInt(1, ALL_ANIME.length-1)
-                    document.location.href = getDomainLink() + ALL_ANIME[index]
-                }
-                const button = `<li class="movies"><a title="Random Anime" href="#" class="random ads-evt">Random</a></li>`
-                $("nav.menu_top > ul > li").last().after(button)
-                document.querySelector("li.movies > a.random").onclick = getRandomAnime
+                const index = getRandomInt(1, ALL_ANIME.length-1)
+                document.location.href = getDomainLink() + ALL_ANIME[index]
             }
-    })
+
+
+    })}
+    const button = `<li class="movies"><a title="Random Anime" href="#" class="random ads-evt">Random</a></li>`
+    $("nav.menu_top > ul > li").last().after(button)
+    document.querySelector("li.movies > a.random").onclick = getRandomAnime
 })();
