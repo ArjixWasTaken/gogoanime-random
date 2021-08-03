@@ -20,6 +20,7 @@
 // @require      https://code.jquery.com/jquery-3.5.1.min.js
 // ==/UserScript==
 
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
